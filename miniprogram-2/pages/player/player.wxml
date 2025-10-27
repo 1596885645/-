@@ -1,0 +1,2 @@
+<video id="video" src="{{url}}" controls autoplay loop show-center-play-btn />
+<button bindtap="save">保存到相册</button>

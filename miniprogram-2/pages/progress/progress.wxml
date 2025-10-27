@@ -1,0 +1,4 @@
+<view class="box">
+  <text>{{status==='running'?'视频拼命生成中…':status==='success'?'生成完成！':'生成失败'}}</text>
+  <button wx:if="{{status==='success'}}" bindtap="goPlay">立即播放</button>
+</view>

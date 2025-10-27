@@ -1,0 +1,44 @@
+{
+    "pages": [
+      "pages/index/index",
+      "pages/video-generator/video-generator", 
+      "pages/text-to-image/text-to-image",
+      "pages/ai-chat/ai-chat",
+      "pages/voice-clone/voice-clone",
+      "pages/user/user"
+    ],
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#667eea",
+      "navigationBarTitleText": "TeleAI",
+      "navigationBarTextStyle": "white",
+      "enablePullDownRefresh": false
+    },
+    "tabBar": {
+      "color": "#999999",
+      "selectedColor": "#667eea",
+      "backgroundColor": "#ffffff",
+      "borderStyle": "black",
+      "list": [
+        {
+          "pagePath": "pages/index/index",
+          "text": "首页"
+        },
+        {
+          "pagePath": "pages/user/user", 
+          "text": "我的"
+        }
+      ]
+    },
+    "permission": {
+      "scope.writePhotosAlbum": {
+        "desc": "需要授权保存视频到相册"
+      }
+    },
+    "networkTimeout": {
+      "request": 30000,
+      "uploadFile": 60000
+    },
+    "usingComponents": {},
+    "sitemapLocation": "sitemap.json"
+  }

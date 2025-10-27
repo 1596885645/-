@@ -1,0 +1,55 @@
+<view class="container">
+  <!-- 用户信息区域 -->
+  <view class="user-section">
+    <view class="user-card">
+      <view class="user-info" wx:if="{{isAuthorized && userInfo}}">
+        <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+        <view class="user-detail">
+          <text class="nickname">{{userInfo.nickName}}</text>
+          <text class="user-id">用户ID: {{userInfo.nickName}}@teleai</text>
+        </view>
+      </view>
+      <view class="auth-section" wx:else>
+        <view class="auth-header">
+          <text class="auth-title">尚未登录</text>
+          <text class="auth-subtitle">登录后享受完整服务</text>
+        </view>
+        <button class="auth-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+          立即登录
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能列表 -->
+  <view class="functions-section">
+    <view class="section-header">
+      <text class="section-title">功能设置</text>
+    </view>
+    <view class="functions-list">
+      <view class="function-item" wx:for="{{functions}}" wx:key="index" bindtap="navigateToFunction" data-index="{{index}}">
+        <view class="function-icon">{{item.icon}}</view>
+        <text class="function-name">{{item.name}}</text>
+        <view class="function-arrow">›</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 联系客服 -->
+  <view class="contact-section">
+    <view class="contact-card">
+      <view class="contact-header">
+        <text class="contact-title">需要帮助？</text>
+        <text class="contact-desc">我们随时为您服务</text>
+      </view>
+      <button class="contact-btn" bindtap="contactService">
+        联系客服
+      </button>
+    </view>
+  </view>
+
+  <!-- 版本信息 -->
+  <view class="version-section">
+    <text class="version-text">TeleAI v{{version}}</text>
+  </view>
+</view>

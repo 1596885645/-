@@ -1,0 +1,179 @@
+.container {
+    padding: 20rpx;
+    min-height: 100vh;
+    background: #f5f5f5;
+  }
+  
+  .user-section {
+    margin-bottom: 30rpx;
+  }
+  
+  .user-card {
+    background: white;
+    border-radius: 20rpx;
+    padding: 40rpx 30rpx;
+    box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 30rpx;
+    border: 4rpx solid #667eea;
+  }
+  
+  .user-detail {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  
+  .nickname {
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10rpx;
+  }
+  
+  .user-id {
+    font-size: 24rpx;
+    color: #666;
+  }
+  
+  .auth-header {
+    text-align: center;
+    margin-bottom: 30rpx;
+  }
+  
+  .auth-title {
+    display: block;
+    font-size: 36rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10rpx;
+  }
+  
+  .auth-subtitle {
+    display: block;
+    font-size: 28rpx;
+    color: #666;
+  }
+  
+  .auth-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border-radius: 50rpx;
+    padding: 24rpx 0;
+    font-size: 32rpx;
+    border: none;
+    width: 100%;
+  }
+  
+  .functions-section {
+    background: white;
+    border-radius: 20rpx;
+    padding: 0 30rpx;
+    margin-bottom: 30rpx;
+    box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-header {
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #f0f0f0;
+  }
+  
+  .section-title {
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .functions-list {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .function-item {
+    display: flex;
+    align-items: center;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #f0f0f0;
+  }
+  
+  .function-item:last-child {
+    border-bottom: none;
+  }
+  
+  .function-icon {
+    font-size: 40rpx;
+    margin-right: 20rpx;
+    width: 60rpx;
+    text-align: center;
+  }
+  
+  .function-name {
+    font-size: 30rpx;
+    color: #333;
+    flex: 1;
+  }
+  
+  .function-arrow {
+    font-size: 36rpx;
+    color: #999;
+  }
+  
+  .contact-section {
+    margin-bottom: 30rpx;
+  }
+  
+  .contact-card {
+    background: white;
+    border-radius: 20rpx;
+    padding: 40rpx 30rpx;
+    text-align: center;
+    box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-header {
+    margin-bottom: 30rpx;
+  }
+  
+  .contact-title {
+    display: block;
+    font-size: 32rpx;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10rpx;
+  }
+  
+  .contact-desc {
+    display: block;
+    font-size: 26rpx;
+    color: #666;
+  }
+  
+  .contact-btn {
+    background: #f8f9fa;
+    color: #667eea;
+    border: 2rpx solid #667eea;
+    border-radius: 50rpx;
+    padding: 20rpx 0;
+    font-size: 30rpx;
+    width: 100%;
+  }
+  
+  .version-section {
+    text-align: center;
+    padding: 40rpx 0;
+  }
+  
+  .version-text {
+    font-size: 26rpx;
+    color: #999;
+  }

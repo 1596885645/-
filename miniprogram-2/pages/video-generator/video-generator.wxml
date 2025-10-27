@@ -1,0 +1,92 @@
+<!-- video-generator.wxml -->
+<view class="container">
+  <!-- 选择图片区域 -->
+  <view class="section">
+    <view class="section-title">选择图片</view>
+    <view class="image-section">
+      <view class="image-uploader" bindtap="chooseImage">
+        <block wx:if="{{selectedImage}}">
+          <image src="{{selectedImage}}" mode="aspectFit" class="selected-image" bindtap="previewImage"></image>
+        </block>
+        <block wx:else>
+          <view class="upload-placeholder">
+            <text class="upload-icon">+</text>
+            <text class="upload-text">点击选择图片</text>
+          </view>
+        </block>
+      </view>
+    </view>
+  </view>
+
+  <!-- 描述输入区域 -->
+  <view class="section">
+    <view class="section-title">描述你想生成的视频</view>
+    <textarea 
+      value="{{prompt}}" 
+      placeholder="请输入对视频的描述..." 
+      class="prompt-input" 
+      bindinput="onPromptInput"
+      maxlength="200"
+      show-confirm-bar="{{false}}"
+    ></textarea>
+    <view class="char-count">{{prompt.length}}/200</view>
+  </view>
+
+  <!-- 生成按钮 -->
+  <view class="section">
+    <button 
+      class="generate-btn {{generating ? 'generating' : ''}}" 
+      bindtap="generateVideo"
+    >
+      {{generating ? '生成中...' : '生成视频'}}
+    </button>
+    
+    <!-- 进度条 -->
+    <block wx:if="{{generating}}">
+      <view class="progress-section">
+        <view class="progress-bar">
+          <view class="progress-inner" style="width: {{progress}}"></view>
+        </view>
+        <text class="progress-text">{{progress}}%</text>
+      </view>
+    </block>
+  </view>
+
+  <!-- 视频结果区域 -->
+  <block wx:if="{{videoUrl}}">
+    <view class="section">
+      <view class="section-title">生成的视频</view>
+      <view class="video-container">
+        <video 
+          id="resultVideo"
+          src="{{videoUrl}}" 
+          controls 
+          autoplay
+          class="result-video"
+          binderror="onVideoError"
+          bindplay="onVideoPlay"
+          bindpause="onVideoPause"
+          bindended="onVideoEnded"
+        ></video>
+        
+        <!-- 视频控制按钮 -->
+        <view class="video-controls">
+          <button class="control-btn" bindtap="playVideo">播放</button>
+          <button class="control-btn" bindtap="pauseVideo">暂停</button>
+          <button class="control-btn" bindtap="previewVideo">全屏预览</button>
+          <button class="control-btn" bindtap="saveVideo">保存到相册</button>
+        </view>
+        
+        <!-- 分享按钮 -->
+        <view class="share-section">
+          <button class="share-btn" open-type="share">分享给好友</button>
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!-- 重新开始按钮 -->
+  <view class="section">
+    <button class="reset-btn" bindtap="resetPage">重新开始</button>
+  </view>
+</view>

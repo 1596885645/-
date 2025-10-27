@@ -1,0 +1,65 @@
+<view class="container">
+  <!-- 用户信息区域 -->
+  <view class="user-section">
+    <view class="user-card">
+      <view class="user-info" wx:if="{{isAuthorized && userInfo}}">
+        <image class="avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill"></image>
+        <view class="user-detail">
+          <text class="nickname">{{userInfo.nickName}}</text>
+          <text class="welcome">欢迎使用TeleAI智能工具</text>
+        </view>
+      </view>
+      <view class="auth-section" wx:else>
+        <view class="auth-header">
+          <text class="auth-title">欢迎使用TeleAI</text>
+          <text class="auth-subtitle">请授权登录以使用AI功能</text>
+        </view>
+        <button class="auth-btn" open-type="getUserInfo" bindgetuserinfo="onGetUserInfo">
+          微信一键登录
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能网格 -->
+  <view class="features-section">
+    <view class="section-header">
+      <text class="section-title">AI功能</text>
+      <text class="section-desc">选择你需要的智能工具</text>
+    </view>
+    <view class="features-grid">
+      <view class="feature-item" wx:for="{{features}}" wx:key="id" bindtap="navigateToFeature" data-path="{{item.path}}">
+        <view class="feature-icon">{{item.iconText}}</view>
+        <text class="feature-name">{{item.name}}</text>
+        <text class="feature-desc">{{item.desc}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 使用说明 -->
+  <view class="instruction-section">
+    <view class="section-header">
+      <text class="section-title">使用说明</text>
+    </view>
+    <view class="instructions">
+      <view class="instruction-item">
+        <view class="step-container">
+          <text class="step">1</text>
+        </view>
+        <text class="instruction-text">点击上方授权按钮完成登录</text>
+      </view>
+      <view class="instruction-item">
+        <view class="step-container">
+          <text class="step">2</text>
+        </view>
+        <text class="instruction-text">选择你需要的AI功能模块</text>
+      </view>
+      <view class="instruction-item">
+        <view class="step-container">
+          <text class="step">3</text>
+        </view>
+        <text class="instruction-text">按照提示操作等待AI处理</text>
+      </view>
+    </view>
+  </view>
+</view>
