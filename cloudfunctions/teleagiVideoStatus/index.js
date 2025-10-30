@@ -1,17 +1,17 @@
 const cloud = require('wx-server-sdk')
 cloud.init({
-  env: 'cloud1-9gu0w07d15cd3e8e'
+  env: 'cloud1-9gu0w07d15'
 })
 
 // 配置参数
-const ACCESS_KEY = 'ea4fe9ff62f2473d9bc626ef34025340'
-const SECRET_KEY = 'e211f813ac694dcda217a3b4bde46425'
+const ACCESS_KEY = 'ea4fe9ff62f2473d9bc626ef340'
+const SECRET_KEY = 'e211f813ac694dcda217a3b4bd5'
 const REGION = 'BJ'
-const EXPIRATION_IN_SECONDS = '43200'
+const EXPIRATION_IN_SECONDS = '4320'
 const SIGNED_HEADERS = 'x-app-id'
 
-const QUERY_URL = "https://openapi.teleagi.cn/aipaas/lm/v1/asyncResult/query"
-const FILE_DOMAIN = "https://openapi.teleagi.cn:443/aipaas-file/lm"
+const QUERY_URL = ""
+const FILE_DOMAIN = ""
 
 // 编码函数
 function normalize(string, encodingSlash = true) {
