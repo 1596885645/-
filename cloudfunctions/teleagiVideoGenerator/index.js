@@ -4,13 +4,13 @@ cloud.init({
 })
 
 // 配置参数
-const ACCESS_KEY = 'ea4fe9ff62f2473d9bc626ef34025340'
-const SECRET_KEY = 'e211f813ac694dcda217a3b4bde46425'
+const ACCESS_KEY = 'ea4fe9ff62f2473d9bc620'
+const SECRET_KEY = 'e211f813ac694d77de46425'
 const REGION = 'BJ'
 const EXPIRATION_IN_SECONDS = '43200'
 const SIGNED_HEADERS = 'x-app-id'
 
-const REQUEST_URL = "https://openapi.teleagi.cn/aipaas/lm/v1/video/imageGeneral"
+const REQUEST_URL = ""
 
 // 编码函数和其他函数保持不变...
 // [保持原有的 normalize, generateCanonicalUri, generateCanonicalHeaders, generateSignature, imageToBase64, sendHttpRequest 函数]
