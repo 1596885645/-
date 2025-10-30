@@ -1,6 +1,6 @@
 const cloud = require('wx-server-sdk')
 cloud.init({
-  env: 'cloud1-9gu0w07d15cd3e8e'
+  env: 'cloud1-9gu0w07d8e'
 })
 
 // 延迟触发的主函数
